@@ -1,0 +1,22 @@
+package main
+
+import (
+	"testing"
+	"reflect"
+	"problems"
+)
+
+func TestTwo_sum(t *testing.T) {
+    // Define test cases here
+    var testCases []struct {
+        inputs []interface{} // Modify this as per your function's input types
+        want interface{}     // Modify this as per your function's return type
+    }
+
+    for _, tc := range testCases {
+        got := Two_sum(tc.inputs...) // Assuming the function can handle variadic inputs
+        if !reflect.DeepEqual(got, tc.want) {
+            t.Errorf("For inputs %v, got %v, want %v", tc.inputs, got, tc.want)
+        }
+    }
+}
